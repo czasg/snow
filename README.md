@@ -11,13 +11,14 @@ package main
 import "github.com/czasg/snow"
 
 func main() {
-    // default
-    snow.Next()
-    // define WorkID / DataCenterID
+    // default WorkID & DataCenterID is 0.
+    snowID := snow.Next()
+    
+    // self-define WorkID / DataCenterID
     s := snow.Snow{
-        WorkID:       0,
-        DataCenterID: 0,
+        WorkID:       1,
+        DataCenterID: 2,
     }
-    s.Next()
+    snowID = s.Next()
 }
 ```
